@@ -1,0 +1,23 @@
+.tvshows{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 4%;
+    text-align: center;
+}
+.tv-show{
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    padding: 5px;
+}
+.tvshows img{
+    width: 100%;
+}
+.p{
+    margin-top: 10px;
+}
+@media (max-width: 500px) {
+    .tvshows img{
+        aspect-ratio:1;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,136 @@
+.navBar{
+    width: 100%;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 14px;
+    color: #e5e5e5;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+    z-index: 1;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.navbar-left img{
+    width: 90px;
+}
+.navbar-left .menu-items {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    text-transform: capitalize;
+}
+/* .navbar-left .menu-items.show-menu-items{
+    display: flex;
+} */
+.navbar-left ul li{
+    cursor: pointer;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar-right .icons{
+    width: 20px;
+    cursor: pointer;
+}
+.navbar-right .profile{
+    border-radius: 4px;
+    width: 30px;
+}
+.navbar-profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.navBar .dropdown{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background-color: #191919;
+    padding: 18px 22px ;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+
+    display: none;
+}
+.navBar .dropdown p{
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.navbar-profile:hover .dropdown{
+    display: block;
+}
+.menu-icon{
+    filter: invert(1) brightness(100%);
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+.menu-icon.showbtn{
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navbar-profile .dropdown {
+      display: none; 
+    }
+    .navbar-profile.active .dropdown {
+      display: block;
+    }
+    .navBar{
+        padding: 20px 4%;
+    }
+    .navbar-left .menu-items{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(255, 17, 17, 0.7);
+        background: #BB1B22;
+        padding: 20px;
+        transform: translateX(100%);
+        width: 40%;
+        transition: all .3s ease-in-out;
+    }
+    .navbar-left .menu-items.show-menu-items{
+        transform: translateX(0%);
+
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navBar img{
+        height: 25px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .navBar img{
+        height: 20px;
+    }
+    .menu-icon {
+        width: 22px;
+        margin-right: 10px;
+    }
+    .navbar-right .profile{
+        width: 20px;
+    }
+    .navbar-right{
+        gap: 10px;
+    }
+    .navbar-left .menu-items{
+        width: 60%;
+    }
+  }
